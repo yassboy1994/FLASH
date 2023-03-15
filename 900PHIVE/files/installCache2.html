@@ -4,7 +4,7 @@
 function DLProgress(e){
 	parent.ScrOverlay.style.display="block";
 	Percent=(Math.round(e.loaded / e.total * 100));
-	parent.cacheUPDtxt.innerHTML="Installing Offline Cache...";
+	parent.cacheUPDtxt.innerHTML="Installing PS-Phive! Offline Cache...";
 	parent.CacheBar2.style.width=Percent + '%';
 }
 function DisplayCacheProgress(){
@@ -12,7 +12,7 @@ function DisplayCacheProgress(){
 	setTimeout(function(){
 	 parent.CacheProgress.style.display="none";
 	 parent.CacheProgress2.style.display="none";
-	 parent.cacheUPDtxt.innerHTML="Re-Open The Browser To Continue";},2500);
+	 parent.cacheUPDtxt.innerHTML="Re-Open The Browser To Continue...<br>(Or Setup Your ESP32S2 Connection Now If You Use One)";},2500);
 	}
 	window.applicationCache.addEventListener("progress",DLProgress,false);
 	window.applicationCache.oncached=function(e){DisplayCacheProgress();};
